@@ -1,26 +1,35 @@
 <?php
 
 class TinhToan {
-    public $v1 ;//unused
-    public $v2 ;//unused
+    public $v1 = '';
+    public $v2 = '';
+    public $operater = '';
+    public $kq = '';
 
-    public function Tong($v1, $v2) {
-        $kq = $v1 + $v2;
-        return $kq;
-    }
+    public function calculate ($operater, $v1, $v2) {
+        $kq = '';
+        switch ($operater) {
+            case '+':
+                return $kq = $v1 + $v2;
+                break;
+            case '-':
+                return $kq = $v1 - $v2;
+                break;
+            case '*':
+                if($v1 !== 0 && $v2 !== 0){
+                    return $kq = $v1 * $v2;  
+                }
+                
+                break;
+            case '/':
+                if($v1 !== 0 && $v2 !== 0){
+                   return $kq = $v1 / $v2; 
+                }
+                break;
+        }
+   }
 
-    public function Hieu($v1, $v2){
-        $kq = $v1 - $v2;
-        return $kq;
-    }
-
-    public function Tich($v1, $v2){
-        $kq = $v1 * $v2;
-        return $kq;
-    }
-
-    public function Thuong($v1, $v2){
-        $kq = $v1 / $v2;//Kiem tra v2 !== 0 moi thuc hien phep chia
-        return $kq;
-    }
+   public function display() {
+       return 'Kết quả ' . $this->v1 . ' ' . $this->operater . ' ' . $this->v2 . ' là : ' . $this->kq; 
+   }
 }
