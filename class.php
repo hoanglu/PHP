@@ -18,7 +18,7 @@ class TinhToan {
     }
 
     public function calculate () {
-        switch ($operater) {
+        switch ($this->operater) {
             case '+':
                 $kq = $this->v1 + $this->v2;
                 break;
