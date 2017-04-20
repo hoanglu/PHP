@@ -1,6 +1,7 @@
 <?php
 
 class TinhToan {
+
     public $v1 = '';
     public $v2 = '';
     public $operater = '';
@@ -15,6 +16,7 @@ class TinhToan {
         $this->v1 = $v1;
         $this->v2 = $v2;
         $this->operator = $operator;
+
     }
 
     public function calculate () {
@@ -36,6 +38,7 @@ class TinhToan {
         }
         $this->kq = $kq;
    }
+
 
    public function display() {
        return 'Kết quả ' . $this->v1 . ' ' . $this->operater . ' ' . $this->v2 . ' là : ' . $this->kq; 
