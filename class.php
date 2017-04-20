@@ -5,28 +5,36 @@ class TinhToan {
     public $v2 = '';
     public $operater = '';
     public $kq = '';
+    
+    /**
+     * Phuong thuc khoi tao
+     * Magic function, __
+     */
+    public function __construct($v1, $v2, $operator = '+')
+    {
+        $this->v1 = $v1;
+        $this->v2 = $v2;
+        $this->operator = $operator;
+    }
 
-    public function calculate ($operater, $v1, $v2) {
-        $kq = '';
+    public function calculate () {
         switch ($operater) {
             case '+':
-                return $kq = $v1 + $v2;
+                $kq = $this->v1 + $this->v2;
                 break;
             case '-':
-                return $kq = $v1 - $v2;
+                $kq = $this->v1 - $this->v2;
                 break;
             case '*':
-                if($v1 !== 0 && $v2 !== 0){
-                    return $kq = $v1 * $v2;  
-                }
-                
+                $kq = $this->v1 * $this->v2;
                 break;
             case '/':
-                if($v1 !== 0 && $v2 !== 0){
-                   return $kq = $v1 / $v2; 
+                if($this->v2 !== 0){
+                   $kq = $this->v1 / $this->v2; 
                 }
                 break;
         }
+        $this->kq = $kq;
    }
 
    public function display() {
