@@ -31,8 +31,8 @@ Nếu không viết gì thì sao nó hiểu để mình gọi được cái đ�
             $a      = isset($_POST['txta'])?$_POST['txta']:null;
             $b      = isset($_POST['txtb'])?$_POST['txtb']:null;
             $toantu = isset($_POST['toantu'])?$_POST['toantu']:null;
-            $tinh   = new TinhToan();
-            $tinh->calculate($toantu, $a, $b);
+            $tinh   = new TinhToan($a, $b, $toantu);
+            $tinh->calculate();
             
         ?>
         <form method='Post'>

@@ -4,7 +4,7 @@ class TinhToan {
 
     public $v1 = '';
     public $v2 = '';
-    public $operater = '';
+    public $operator = '';
     public $kq = '';
     
     /**
@@ -20,7 +20,8 @@ class TinhToan {
     }
 
     public function calculate () {
-        switch ($this->operater) {
+        $kq = '';
+        switch ($this->operator) {
             case '+':
                 $kq = $this->v1 + $this->v2;
                 break;
@@ -41,6 +42,6 @@ class TinhToan {
 
 
    public function display() {
-       return 'Kết quả ' . $this->v1 . ' ' . $this->operater . ' ' . $this->v2 . ' là : ' . $this->kq; 
+       return 'Kết quả ' . $this->v1 . ' ' . $this->operator . ' ' . $this->v2 . ' là : ' . $this->kq; 
    }
 }
