@@ -26,26 +26,16 @@ Nếu không viết gì thì sao nó hiểu để mình gọi được cái đ�
         <meta charset="UTF-8">
     </head>
     <body>
-        <?php
-            include 'class.php';
-            $a      = isset($_POST['txta'])?$_POST['txta']:null;
-            $b      = isset($_POST['txtb'])?$_POST['txtb']:null;
-            $toantu = isset($_POST['toantu'])?$_POST['toantu']:null;
-            $tinh   = new TinhToan($a, $b, $toantu);
-            $tinh->calculate();
-            
-        ?>
-        <form method='Post'>
+        <form method='Post' action="tinhtoan_ketqua.php">
             <label>A</label>
-            <input type="text" name="txta" value="<?php echo $a?>">
+            <input type="text" name="txta" value="">
 
-            <input type="text" name="toantu" value="<?php echo $toantu?>">
+            <input type="text" name="toantu" value="">
 
             <label>B</label>
-            <input type="text" name="txtb" value="<?php echo $b?>">
+            <input type="text" name="txtb" value="">
 
             <input type="submit" name="Tính">
-            <?php echo $tinh->display(); ?>
         </form>
     </body>
 </html>
